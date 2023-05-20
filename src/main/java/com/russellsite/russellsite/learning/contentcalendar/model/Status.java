@@ -1,4 +1,4 @@
-package com.russellsite.russellsite.contentcalendar.model;
+package com.russellsite.russellsite.learning.contentcalendar.model;
 
 public enum Status {
     IDEA, IN_PROGRESS, COMPLETED, PUBLISHED

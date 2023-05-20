@@ -1,7 +1,7 @@
-package com.russellsite.russellsite.contentcalendar.controller;
+package com.russellsite.russellsite.learning.contentcalendar.controller;
 
-import com.russellsite.russellsite.contentcalendar.model.Content;
-import com.russellsite.russellsite.contentcalendar.repository.ContentCollectionRepository;
+import com.russellsite.russellsite.learning.contentcalendar.model.Content;
+import com.russellsite.russellsite.learning.contentcalendar.repository.ContentCollectionRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;

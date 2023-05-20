@@ -1,4 +1,4 @@
-package com.russellsite.russellsite.sayhelloapp;
+package com.russellsite.russellsite.learning.sayhelloapp;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

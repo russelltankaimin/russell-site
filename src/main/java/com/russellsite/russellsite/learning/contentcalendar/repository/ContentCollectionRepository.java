@@ -1,8 +1,8 @@
-package com.russellsite.russellsite.contentcalendar.repository;
+package com.russellsite.russellsite.learning.contentcalendar.repository;
 
-import com.russellsite.russellsite.contentcalendar.model.Content;
-import com.russellsite.russellsite.contentcalendar.model.Status;
-import com.russellsite.russellsite.contentcalendar.model.Type;
+import com.russellsite.russellsite.learning.contentcalendar.model.Content;
+import com.russellsite.russellsite.learning.contentcalendar.model.Status;
+import com.russellsite.russellsite.learning.contentcalendar.model.Type;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
