@@ -9,8 +9,8 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.URL;
 
+import static com.russellsite.russellsite.util.HttpUtils.buildConnection;
 import static com.russellsite.russellsite.util.HttpUtils.getBodyString;
 
 @RestController
@@ -22,15 +22,12 @@ public class PrerequisiteTree {
     @GetMapping("/{moduleCode}")
     public String getModuleInformation(@PathVariable String moduleCode) {
         try {
-            String u = String.format("https://api.nusmods.com/v2/%s/modules/%s.json", ACADEMIC_YEAR, moduleCode);
-            URL url = new URL(u);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
-            connection.setConnectTimeout(5000);
-            connection.setReadTimeout(5000);
+            String urlString = String.format("https://api.nusmods.com/v2/%s/modules/%s.json", ACADEMIC_YEAR, moduleCode);
+            HttpURLConnection connection = buildConnection(urlString);
             return getBodyString(connection);
         } catch (IOException ioe) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Module does not exist on NUSMODS");
         }
+
     }
 }
